@@ -1,0 +1,199 @@
+<project name="JUnitTest" default="prepare.testbase" basedir=".">
+
+  <import file="${working.dir}/../Testing_Framework/junit-project-build.xml" optional="true"/>
+
+  <!-- Project's properties to build junit-testbase -->
+  <property name="src.dir" location="src" />
+  <property name="build.dir" location="build" />
+  <property name="working.dir" location="." />
+  <property name="src.temp.dir" location="temp" />
+
+  <!-- Properties used to define tests location -->
+
+  <!-- If name of current working dir is 'Testing_Framework', then we are in the new svn struture, so the ATCs folder is at ..\ATCs -->
+  <available file="${working.dir}/../Testing_Framework" value="${working.dir}/../ATCs" type="dir" property="test.dir" />
+  <!-- If we are in the old svn structure, then fall back to using ATCs folder under current Testing_Framework folder -->
+  <property name="test.dir" location="${working.dir}/ATCs" />
+
+  <property name="test.report.dir" location="${working.dir}/junit" />
+
+  <!-- Check to see if junit-project-build.xml file is present, set property call.project.build.targets to true and import xml file !-->
+
+  <target name="determineProjectBuildXMLStatus">
+    <condition property="call.project.build.targets">
+      <available file="${working.dir}/../Testing_Framework/junit-project-build.xml" type="file" />
+    </condition>
+  </target>
+
+  <target name="all">
+    <delete failonerror="false" dir="${test.report.dir}" />
+    <delete failonerror="false" dir="${build.dir}" />
+    <antcall target="atc_junit_test" />
+    <antcall target="atc_junit_report" />
+  </target>
+
+  <!-- Folder with a product/test related jars, i.e. DB drivers, application jars, etc. -->
+  <property name="extra.dir" location="${working.dir}/../Testing_Framework/extras" />
+
+  <!-- Properties used to define a set of tests to execute -->
+  <property name="test.list" value="" />
+  <property name="data.slot" value="" />
+
+  <path id="junit.class.path">
+    <fileset dir="lib"><include name="**/*.jar"/></fileset>
+    <fileset dir="${extra.dir}"><include name="**/*.jar"/></fileset>
+    <pathelement location="${build.dir}" />
+  </path>
+
+  <condition property="testbase.not.ready">
+    <or>
+      <not><available file="${build.dir}" /></not>
+      <not><available file="${test.report.dir}" /></not>
+    </or>
+  </condition>
+
+  <target name="clean" if="testbase.not.ready">
+    <delete dir="${build.dir}" />
+    <delete dir="${test.report.dir}" />
+  </target>
+
+  <target name="mkdir" if="testbase.not.ready">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${test.report.dir}" />
+    <mkdir dir="${extra.dir}" />
+  </target>
+
+  <target name="prepare.testbase" depends="clean, mkdir">
+    <javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" debuglevel="lines,vars,source" >
+      <classpath refid="junit.class.path" />
+    </javac>
+    <copy todir="${build.dir}/resources">
+      <fileset dir="resources"/>
+    </copy>
+    <jar basedir="${build.dir}" destfile="lib/junit-testbase.jar" />
+  </target>
+
+  <target name="compile">
+
+    <antcall target="callBeforeCompile">
+    </antcall>
+
+    <!-- For all ATCs listed in test.list, copy its ATC_*.java file into a temp folder, then use this folder as the source for compilation. -->
+    <delete dir="${src.temp.dir}" />
+    <mkdir dir="${src.temp.dir}" />
+
+    <copy todir="${src.temp.dir}" overwrite="true">
+      <fileset dir="${test.dir}">
+        <filename regex="ATC_(${test.list})" />
+      </fileset>
+    </copy>
+
+    <javac srcdir="${src.temp.dir}:${extra.dir}" destdir="${build.dir}" debug="true" debuglevel="lines,vars,source" >
+      <classpath refid="junit.class.path" />
+    </javac>
+
+    <delete dir="${src.temp.dir}" verbose="true"/>
+
+    <antcall target="callAfterCompile">
+    </antcall>
+  </target>
+
+  <target if="call.project.build.targets" name="callBeforeCompile" 
+    description = "Calls the imported file's beforeCompile target if the property is set to true">
+    <antcall target="beforeCompile">
+    </antcall>
+  </target>
+
+  <target if="call.project.build.targets" name="callAfterCompile" 
+    description = "Calls the imported file's afterCompile target if the property is set to true">
+    <antcall target="afterCompile">
+    </antcall>
+  </target>
+
+  <fileset id="AntListOfTestFiles" dir="${build.dir}" includes="**\ATC_*.class">
+    <filename regex="ATC_(${test.list})" />
+    <exclude name="**/*$*" />
+  </fileset>
+
+  <target name="atc_junit_test" depends="determineProjectBuildXMLStatus, prepare.testbase, compile, ensureTestOrder">
+    <tempfile property="temp.dir" destDir="${java.io.tmpdir}" prefix="atc_"/>
+    <mkdir dir="${temp.dir}"/>
+    <junit printsummary="on" fork="true" haltonfailure="no">
+      <!--
+        <jvmarg value="-Xdebug" />
+      <jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5432" />
+    -->
+
+      <sysproperty key="test.dir" value="${test.dir}" />
+      <sysproperty key="test.report.dir" value="${test.report.dir}" />
+      <sysproperty key="data.slot" value="${data.slot}" />
+      <sysproperty key="atc.temp.dir" value="${temp.dir}"/>
+      <sysproperty key="extra.dir" value="${extra.dir}"/>
+      <classpath refid="junit.class.path" />
+      <formatter type="xml" />
+      <batchtest todir="${test.report.dir}">
+        <filelist refid="OrderedListOfTestFiles"/>
+      </batchtest>
+    </junit>
+    <!--delete dir="${temp.dir}" verbose="true"/-->
+  </target>
+
+  <target name="atc_junit_report">
+    <copy todir="${test.report.dir}" overwrite="true">
+      <fileset dir="${build.dir}/resources">
+        <include name="*.xsl"/>
+        <include name="*.png"/>
+      </fileset>
+    </copy>
+    <copy todir="${test.report.dir}/html/com/devfactory/test/" overwrite="true">
+      <fileset dir="${test.dir}" casesensitive="false">
+        <filename regex="(${test.list})[/\\]src[/\\]" />
+      </fileset>
+      <fileset dir="${test.dir}" casesensitive="false">
+        <filename regex="(${test.list})[/\\]test-data.csv" />
+      </fileset>
+    </copy>
+    <junitreport todir="${test.report.dir}">
+      <fileset dir="${test.report.dir}">
+        <include name="TEST-*.xml"/>
+      </fileset>
+      <report format="frames" todir="${test.report.dir}/html"/>
+    </junitreport>
+    <!--Task to convert generated HTML Log file to JUnit format-->
+    <java classpath="lib/junit-testbase.jar" classname="com.devfactory.test.logging.GenerateJUnitLogHtml">
+      <arg value="${test.report.dir}"/>
+    </java>
+  </target>
+
+  <target name="ensureTestOrder">
+    <script language="javascript">
+
+      <![CDATA[
+
+        var orderToEnsure = String(project.getProperty("test.list"));
+        orderToEnsure = orderToEnsure.split("|");
+
+        var originalFS = project.getReference("AntListOfTestFiles");
+        var dscanner = originalFS.getDirectoryScanner( project );
+        var includesx = dscanner.getIncludedFiles();
+
+        var OrderedListOfTestFiles = project.createDataType("filelist");
+        OrderedListOfTestFiles.setDir( originalFS.getDir() );
+        project.addReference("OrderedListOfTestFiles", OrderedListOfTestFiles);
+
+        var lst = "";
+        for(var i=0;i<orderToEnsure.length;i++)
+          {
+          for(var j=0; j<includesx.length; j++)
+            {
+            if(includesx[j].indexOf(orderToEnsure[i]) > -1)
+            {
+              lst = lst + includesx[j] + ",";
+            }
+          }
+        }
+        OrderedListOfTestFiles.setFiles(lst);
+      ]]>
+    </script>
+  </target>
+</project>

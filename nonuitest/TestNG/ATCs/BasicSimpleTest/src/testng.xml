@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="QAProduct_HelloWorld">
+  <test name="BasicTest">
+    <classes>
+       <class name="com.devfactory.testng.test.BasicSimpleTest"/>
+	   <class name="com.devfactory.testng.test.TestHelloWorld"/>
+    </classes>
+  </test>
+</suite>

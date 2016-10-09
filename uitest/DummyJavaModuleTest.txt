@@ -1,0 +1,2 @@
+This text is to trigger commits for Dummy Java module
+-> to test if there are no java files to run metrics on, there are enuf logs when Code Quality goes to Error state

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="QAProject" basedir="." default="sleep">
+	
+	<property environment="env"/>
+	<property name="atc.dir" location="../ATCs/"/>
+		
+	<target name="sleep" description="delay">
+			<echo message="sleep for ${sleep_delay} seconds"/>
+			<sleep seconds="${sleep_delay}"/>
+	</target>
+
+	<loadfile property="file" srcfile="${env.HOMEDRIVE}${env.HOMEPATH}\.gbuild_agent"/>
+	<target name="extract_atcs_numbers">
+		<for param="line" delimiter="${line.separator}" list="${file}">
+			<sequential>
+				<propertyregex property="ATCslistWithQuotes" input="@{line}" regexp="test_names:\s*\[\{&quot;type&quot;:*&quot;tc&quot;([:\[&quot;a-z,]+)([^\.]*)(\]\}\])+" select="\2"/>
+				<propertyregex property="ATCslist" input="${ATCslistWithQuotes}" regexp="[&quot;\[\]]" replace="" global="true"/>
+			</sequential>
+		</for>
+
+		<condition property="IsKeystoneATC" value="false">
+			<not>  
+				<isset property="ATCslist"/>
+			</not>
+		</condition>
+	<echo message="ATCs List : ${ATCslist}"/>
+	</target>
+			
+				
+</project> 

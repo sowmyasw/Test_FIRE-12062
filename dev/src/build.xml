@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="up-reports" basedir=".">
+	
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="lib.root" value="${basedir}/lib" />
+	
+	<property name="out.classes.dir" value="${basedir}/out" />
+	<property name="out.lib.dir" value="${out.classes.dir}/lib" />
+	<property name="out.bin.dir" value="${out.classes.dir}/bin" />
+	<property environment="env" />
+	<property name="build_number" value="${env.InstallAnyWherePath}" />
+	<property name="reports.dir" value="${basedir}/reports" />
+
+
+	<!-- Set the class path-->
+	<path id="lib.classpath">
+		<fileset dir="${lib.root}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>	
+	
+	
+	<path id="master-classpath">
+		<fileset dir="${lib.root}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="all" description="Compile source tree java files">
+	        <mkdir dir="${out.classes.dir}"/>
+			
+	        <javac debug="true" destdir="${out.classes.dir}" source="1.8" target="1.8">
+				<classpath refid="master-classpath"/>
+				<src path="${src.dir}"/>  				
+	        </javac>
+	 </target>
+	
+	<target name="build" depends="clean" description="Compile source tree java files">
+	        <mkdir dir="${out.classes.dir}"/>
+			
+	        <javac debug="true" destdir="${out.classes.dir}" source="1.8" target="1.8">
+				<classpath refid="master-classpath"/>
+				<src path="${src.dir}"/>  				
+	        </javac>
+	 </target>
+
+	
+	<target name="junit" depends="build">
+		 <ant target="junit-tests" />
+	</target>
+	
+	<target name="up-reports" depends="junit">
+		 <ant target="upload-reports" />
+	</target>
+	
+	<target name="clean" description="Clean output directories">
+	     <delete includeEmptyDirs="true" failonerror="false">
+	        <fileset dir="${out.classes.dir}" />	           	                
+	     </delete>
+   </target>
+		
+</project> 
