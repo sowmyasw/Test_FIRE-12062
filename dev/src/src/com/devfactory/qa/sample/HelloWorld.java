@@ -16,11 +16,6 @@ public class HelloWorld{
     public String printHelloWorld(){
 		//To fire commit
         return "HelloWorld";
-
-//test: GIT master
-//test: GIT master 1 
-//test : GIT master2
-//FIRE-9120 
     }
 	
 	/*
