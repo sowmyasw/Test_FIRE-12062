@@ -23,4 +23,4 @@ cd installers
 
 cp $WORKSPACE/dev/src/src/com/devfactory/qa/sample/*.class .
 
-cp $WORKSPACE/dev/src/src/QAProduct1.jar /nonuitest/TestNG/lib
+cp $WORKSPACE/dev/src/src/QAProduct1.jar $WORKSPACE/nonuitest/TestNG/lib
