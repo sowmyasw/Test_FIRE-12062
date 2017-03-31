@@ -4,8 +4,8 @@
 <suite name="QAProduct_HelloWorld">
   <test name="BasicTest">
     <classes>
-       <class name="com.devfactory.testng.test.BasicSimpleTest"/>
-	   <class name="com.devfactory.testng.test.TestHelloWorld"/>
+      <class name="com.devfactory.testng.test.BasicSimpleTest"/>
+      <class name="com.devfactory.testng.test.TestHelloWorld"/>
     </classes>
   </test>
 </suite>
