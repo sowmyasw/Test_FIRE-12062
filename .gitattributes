@@ -1,0 +1,2 @@
+# Change EOL of java files to CRLF
+*.java eol=crlf
