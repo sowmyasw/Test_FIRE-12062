@@ -1,6 +1,6 @@
-export CLASSPATH=$CLASSPATH:$WORKSPACE/nonuitest/TestNG/lib/testng-6.9.5.jar:$WORKSPACE/nonuitest/TestNG/lib/jcommander.jar:$WORKSPACE/nonuitest/TestNG/lib/QAProduct1.jar:.
+export CLASSPATH=$CLASSPATH:$WORKSPACE/sources/QAProduct/nonuitest/TestNG/lib/testng-6.9.5.jar:$WORKSPACE/sources/QAProduct/nonuitest/TestNG/lib/jcommander.jar:$WORKSPACE/sources/QAProduct/nonuitest/TestNG/lib/QAProduct1.jar:.
 
-cd $WORKSPACE/nonuitest/TestNG/ATCs/BasicSimpleTest/src
+cd $WORKSPACE/sources/QAProduct/nonuitest/TestNG/ATCs/BasicSimpleTest/src
 
 java -cp $CLASSPATH org.testng.TestNG testng.xml
 
