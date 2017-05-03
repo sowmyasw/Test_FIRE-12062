@@ -14,19 +14,4 @@ public class TestHelloWorld {
     HelloWorld hw = new HelloWorld();
     assertEquals("String returned is not HelloWorld", hw.printHelloWorld(), "HelloWorld");
   }
-
-  @Test
-  public void testHelloWorldNegative() {
-    HelloWorld hw = new HelloWorld();
-    assertNotEquals("String returned is HelloWorld But I have to fail the test",
-        hw.printHelloWorld(), "HelloWorld");
-  }
-  
-  @Test
-  public void testHelloWorldExercise(){
-    HelloWorld hw = new HelloWorld();
-    String response = hw.printHelloWorld();
-    System.out.println("The response is: " + response);
-  }
-
 }
