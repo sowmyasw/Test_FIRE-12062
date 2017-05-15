@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="{24b6fa0b-0143-461a-9758-aeb9e9a9428b}">
+				<Prp name="default project" type="S" value="{4047F778-CE2D-4D26-B25F-F62D9A3F4B70}"/>
+			</Node>
+			<Node name="{4047f778-ce2d-4d26-b25f-f62d9a3f4b70}">
+				<Prp name="relpath" type="S" value="..\..\..\ATCs\CommonRepository\CommonRepository.mds.tcLS"/>
+			</Node>
+			<Node name="{4714c108-8dd4-4bd5-8ba1-26ec636fb61b}">
+				<Prp name="relpath" type="S" value="..\..\ATCs\CommonPostCondition\CommonPostCondition.mds.tcLS"/>
+			</Node>
+			<Node name="{632fd16e-8c06-4732-9d89-da2b28bf3c8f}">
+				<Prp name="relpath" type="S" value="..\..\ATCs\ReportGenerator\ReportGenerator.mds.tcLS"/>
+			</Node>
+			<Node name="{a07018f3-ffe2-493e-af09-f0f88dcfc3b1}">
+				<Prp name="relpath" type="S" value="..\..\ATCs\CommonPrecondition\CommonPreCondition.mds.tcLS"/>
+			</Node>
+			<Node name="logs">
+				<Prp name="key" type="S" value="{57A0842D-99BE-41EE-9FA7-1DC38FD5B330}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables">
+				<Node name="datav3">
+					<Node name="var0">
+						<Node name="value">
+							<Prp name="boolvalue" type="B" value="0"/>
+						</Node>
+						<Prp name="name" type="S" value="Coverage"/>
+					</Node>
+					<Node name="var1">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="490045005F0033003200"/>
+						</Node>
+						<Prp name="name" type="S" value="Browser"/>
+					</Node>
+					<Node name="var2">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value=" "/>
+						</Node>
+						<Prp name="name" type="S" value="RunType"/>
+					</Node>
+					<Node name="var3">
+						<Node name="value">
+							<Prp name="boolvalue" type="B" value="0"/>
+						</Node>
+						<Prp name="name" type="S" value="TestExecute"/>
+					</Node>
+				</Node>
+				<Prp name="version" type="I" value="3"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{71078212-FAEB-4856-A901-B237C89E6B5C}"/>
+	</Node>
+</Nodes>

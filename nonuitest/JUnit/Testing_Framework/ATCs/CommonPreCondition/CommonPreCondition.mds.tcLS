@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="{976fc56e-d77a-4139-a3d9-d341335acf97}">
+				<Node name="{70fe2bdb-b20d-438b-974d-0fd4f0dbe40c}">
+					<Prp name="filepath" type="S" value="..\..\"/>
+				</Node>
+				<Node name="{795b3e67-d6d0-4480-b854-8c938368933e}">
+					<Prp name="filepath" type="S" value="..\..\"/>
+				</Node>
+				<Node name="{8aeb7a3a-6d50-4b4f-8fb9-1b874c02a6ec}">
+					<Prp name="filepath" type="S" value="C:\Program Files (x86)\Icode\Everest\Client\"/>
+				</Node>
+			</Node>
+			<Node name="logs">
+				<Prp name="key" type="S" value="{A8A1B7C2-84E9-4434-86EF-3F12DE84E922}"/>
+				<Prp name="relpath" type="S" value="Log"/>
+			</Node>
+			<Node name="variables">
+				<Node name="datav3">
+					<Node name="var0">
+						<Node name="value">
+							<Prp name="strvalue" type="H" value="310030003000"/>
+						</Node>
+						<Prp name="name" type="S" value="NumberOfRecordsToSearchFor"/>
+					</Node>
+				</Node>
+				<Prp name="version" type="I" value="3"/>
+			</Node>
+		</Node>
+		<Prp name="signature" type="S" value="{49FC0C30-9EF7-4DBD-97A8-B7A00E79A2AF}"/>
+	</Node>
+</Nodes>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="Jai" id="0" name="ATC_536708" package="com.devfactory.test" skipped="0" tests="1" time="0.374" timestamp="2015-08-07T15:55:47">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 8.1" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_25\jre\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="C:\Program Files\apache-ant-1.9.4\bin\.." />
+
+          <property name="java.runtime.version" value="1.8.0_25-b18" />
+
+          <property name="user.name" value="jaima" />
+
+          <property name="ant.file.JUnitTest" value="F:\oDesk\NonUITeam\JUnitTestBase\build.xml" />
+
+          <property name="build.dir" value="F:\oDesk\NonUITeam\JUnitTestBase\build" />
+
+          <property name="user.language" value="en" />
+
+          <property name="test.report.dir" value="F:\oDesk\QA\QAProduct\trunk\nonuitest\ATCs\junit" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin" />
+
+          <property name="ant.project.default-target" value="prepare.testbase" />
+
+          <property name="ant.project.name" value="JUnitTest" />
+
+          <property name="java.version" value="1.8.0_25" />
+
+          <property name="user.timezone" value="Asia/Calcutta" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\endorsed" />
+
+          <property name="atc.temp.dir" value="C:\Users\jaima\AppData\Local\Temp\atc_913277010" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="US" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_25\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="F:\oDesk\NonUITeam\JUnitTestBase\build.xml" />
+
+          <property name="os.version" value="6.3" />
+
+          <property name="temp.dir" value="C:\Users\jaima\AppData\Local\Temp\atc_913277010" />
+
+          <property name="working.dir" value="F:\oDesk\QA\QAProduct\trunk\nonuitest\ATCs" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.25-b02" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="C:\Program Files\apache-ant-1.9.4\lib" />
+
+          <property name="ant.file.type.JUnitTest" value="file" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="sun.stdout.encoding" value="cp437" />
+
+          <property name="user.script" value="" />
+
+          <property name="user.home" value="C:\Users\jaima" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="extra.dir" value="F:\oDesk\QA\QAProduct\trunk\nonuitest\Testing_Framework\extras" />
+
+          <property name="test.dir" value="F:\oDesk\QA\QAProduct\trunk\nonuitest\ATCs/../ATCs" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Python34\;C:\Program Files (x86)\Python34\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\apache-ant-1.9.4\bin;C:\Program Files (x86)\Python34\Scripts;;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.devfactory.test.ATC_536708 skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,F:\oDesk\QA\QAProduct\trunk\nonuitest\ATCs\junit\TEST-com.devfactory.test.ATC_536708.xml crashfile=F:\oDesk\NonUITeam\JUnitTestBase\junitvmwatcher3932251584400842277.properties propsfile=F:\oDesk\NonUITeam\JUnitTestBase\junit2909962998142067195.properties" />
+
+          <property name="java.class.path" value="F:\oDesk\NonUITeam\JUnitTestBase\lib\db2jcc.jar;F:\oDesk\NonUITeam\JUnitTestBase\lib\jersey-client-1.2.jar;F:\oDesk\NonUITeam\JUnitTestBase\lib\jersey-core-1.2.jar;F:\oDesk\NonUITeam\JUnitTestBase\lib\jsr311-api-1.1.1.jar;F:\oDesk\NonUITeam\JUnitTestBase\lib\junit-4.8.2.jar;F:\oDesk\NonUITeam\JUnitTestBase\lib\junit-testbase.jar;F:\oDesk\NonUITeam\JUnitTestBase\lib\ojdbc5.jar;F:\oDesk\NonUITeam\JUnitTestBase\lib\opencsv-2.2.jar;F:\oDesk\QA\QAProduct\trunk\nonuitest\Testing_Framework\extras\lib\QAProduct.jar;F:\oDesk\QA\QAProduct\trunk\nonuitest\Testing_Framework\extras\lib\junit-4.8.2.jar;F:\oDesk\QA\QAProduct\trunk\nonuitest\Testing_Framework\extras\lib\org-apache-commons-codec.jar;F:\oDesk\QA\QAProduct\trunk\nonuitest\Testing_Framework\extras\lib\org.json.jar;F:\oDesk\NonUITeam\JUnitTestBase\build;C:\Program Files\apache-ant-1.9.4\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.4\lib\ant.jar;C:\Program Files\apache-ant-1.9.4\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.4\lib\ant-junit4.jar" />
+
+          <property name="test.list" value="536708" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+
+          <property name="testbase.not.ready" value="true" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="" />
+
+          <property name="java.io.tmpdir" value="C:\Users\jaima\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="src.temp.dir" value="F:\oDesk\NonUITeam\JUnitTestBase\temp" />
+
+          <property name="user.dir" value="F:\oDesk\NonUITeam\JUnitTestBase" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="F:\oDesk\NonUITeam\JUnitTestBase" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="C:\Program Files\apache-ant-1.9.4\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="sun.stderr.encoding" value="cp437" />
+
+          <property name="data.slot" value="" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="F:\oDesk\NonUITeam\JUnitTestBase\src" />
+
+          <property name="ant.project.invoked-targets" value="atc_junit_test" />
+
+      </properties>
+
+      <testcase classname="com.devfactory.test.ATC_536708" name="test" time="0.32" />
+
+      <system-out><![CDATA['Working directory' is set to 'F:\oDesk\QA\QAProduct\trunk\nonuitest\ATCs\..\ATCs\536708'
+'Reporting directory' is set to 'F:\oDesk\QA\QAProduct\trunk\nonuitest\ATCs\junit\536708_out'
+]]></system-out>
+
+      <system-err><![CDATA[Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase beforeTest
+WARNING: Invalid 'data.slot' value. Default (-1) will be used.%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase enterPhase
+INFO: PREPARE START
+Aug 07, 2015 9:25:47 PM com.devfactory.test.ATC_536708 prepare
+INFO: Preparing environment%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase exitPhase
+INFO: PREPARE END
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase enterPhase
+INFO: EXECUTE START
+Aug 07, 2015 9:25:47 PM com.devfactory.test.ATC_536708 execute
+INFO: Testing QAProductHelloWorld.testPrintHelloWorld%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.ATC_536708 testPrintHelloWorld
+INFO: Initializing HelloWorld%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.ATC_536708 testPrintHelloWorld
+INFO: Calling printHelloWorld()%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.ATC_536708 testPrintHelloWorld
+INFO: HelloWorld returned: HelloWorld%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase exitPhase
+INFO: EXECUTE END
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase enterPhase
+INFO: COLLECT START
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase exitPhase
+INFO: COLLECT END
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase enterPhase
+INFO: VALIDATE START
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitQASampleTestBase validate
+INFO: Performing validations on execution results%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.Assert report
+INFO: Attribute 'JUnit test QAProductHelloWorld.testPrintHelloWorld executed successfully' has correct value, true%$%pass
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitQASampleTestBase validate
+INFO: Validations completed successfully.%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase exitPhase
+INFO: VALIDATE END
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase enterPhase
+INFO: CONCLUDE START
+Aug 07, 2015 9:25:47 PM com.devfactory.test.ATC_536708 conclude
+INFO: Cleaning environment%$%ok
+Aug 07, 2015 9:25:47 PM com.devfactory.test.JUnitTestBase exitPhase
+INFO: CONCLUDE END
+]]></system-err>
+
+  </testsuite>
+</testsuites>
