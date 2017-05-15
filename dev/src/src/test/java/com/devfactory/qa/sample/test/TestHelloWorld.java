@@ -10,7 +10,7 @@ import org.junit.Test;
 public class TestHelloWorld {
 
   @Test
-  public void testHelloWorldPositive(){
+  public void testHelloWorldPositive() {
     HelloWorld hw = new HelloWorld();
     assertEquals("String returned is not HelloWorld", hw.printHelloWorld(), "HelloWorld");
   }
