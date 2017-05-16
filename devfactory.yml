@@ -1,0 +1,6 @@
+devfactory:
+  version: 1
+  coverage:
+    excludes:
+      - com/devfactory/test/ATC_536708.java
+      - '**/*546454.java'
