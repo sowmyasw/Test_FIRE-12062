@@ -4,7 +4,7 @@ package com.devfactory.qa.sample.test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.devfactory.qa.sample.HelloWorld;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class TestHelloWorld_AssertJ {
 

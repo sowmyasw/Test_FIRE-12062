@@ -1,8 +1,9 @@
 package com.devfactory.qa.sample.test;
 
 import com.devfactory.qa.sample.HelloWorld;
+import org.junit.Test;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+
 
 public class TestHelloWorld_TestNg {
 
