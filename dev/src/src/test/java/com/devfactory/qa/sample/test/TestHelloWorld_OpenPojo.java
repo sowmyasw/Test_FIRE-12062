@@ -5,6 +5,8 @@ import com.devfactory.qa.sample.HelloWorld;
 import com.openpojo.reflection.PojoClass;
 import com.openpojo.reflection.impl.PojoClassFactory;
 import com.openpojo.validation.PojoValidator;
+import com.openpojo.validation.rule.impl.GetterMustExistRule;
+import com.openpojo.validation.rule.impl.SetterMustExistRule;
 import org.junit.Test;
 
 public class TestHelloWorld_OpenPojo {
@@ -16,8 +18,8 @@ public class TestHelloWorld_OpenPojo {
 
     PojoValidator pojoValidator = new PojoValidator();
 
-    //pojoValidator.addRule(new SetterMustExistRule());
-    //pojoValidator.addRule(new GetterMustExistRule());
+    pojoValidator.addRule(new SetterMustExistRule());
+    pojoValidator.addRule(new GetterMustExistRule());
 
     pojoValidator.runValidation(personPojo);
 
