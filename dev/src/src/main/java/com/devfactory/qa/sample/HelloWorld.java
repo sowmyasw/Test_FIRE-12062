@@ -1,7 +1,7 @@
 package com.devfactory.qa.sample;
 
 //Basic simple only product Class
-//Always returns the string  "Hello  World"
+//Always returns the string  "HelloWorld"
 
 public class HelloWorld {
 
