@@ -2,7 +2,11 @@ devfactory:
   version: 1
   excludes:
     - com/devfactory/test/ATC_536708.java
+  includes:
+    - TestBlocker.cs
   coverage:
     excludes:
       - com/devfactory/test/ATC_536708.java
       - '**/*546454.java'
+    includes:
+      - TestBlocker.cs
