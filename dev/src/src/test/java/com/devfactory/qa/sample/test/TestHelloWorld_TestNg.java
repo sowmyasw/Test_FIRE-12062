@@ -7,15 +7,14 @@ import org.testng.Assert;
 
 public class TestHelloWorld_TestNg {
 
-  @Test
-  public void testPositiveHelloWorld() {
-    HelloWorld helloWorldObj = new HelloWorld();
+    @Test
+    public void testPositiveHelloWorld() {
+        HelloWorld helloWorldObj = new HelloWorld();
 
-    String result = helloWorldObj.printHelloWorld();
+        String result = helloWorldObj.printHelloWorld();
 
-    Assert.assertNotNull(result);
+        Assert.assertNotNull(result);
 
-    Assert.assertEquals("HelloWorld", result);
-  }
-
+        Assert.assertEquals("HelloWorld", result);
+    }
 }

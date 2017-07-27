@@ -8,14 +8,14 @@ import org.junit.Test;
 
 public class TestHelloWorld_AssertJ {
 
-  @Test
-  public void testPositiveHelloWorld() {
-    HelloWorld helloWorldObj = new HelloWorld();
+    @Test
+    public void testPositiveHelloWorld() {
+        HelloWorld helloWorldObj = new HelloWorld();
 
-    String result = helloWorldObj.printHelloWorld();
+        String result = helloWorldObj.printHelloWorld();
 
-    assertThat(result).isNotNull();
+        assertThat(result).isNotNull();
 
-    assertThat(result).isSameAs("HelloWorld");
-  }
+        assertThat(result).isSameAs("HelloWorld");
+    }
 }

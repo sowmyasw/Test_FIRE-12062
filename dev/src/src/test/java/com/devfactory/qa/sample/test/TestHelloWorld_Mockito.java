@@ -15,19 +15,19 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class TestHelloWorld_Mockito {
 
-  @Mock
-  private HelloWorld hw;
+    @Mock
+    private HelloWorld hw;
 
-  @Before
-  public void setUp() throws Exception {
-    hw = mock(HelloWorld.class);
-  }
+    @Before
+    public void setUp() throws Exception {
+        hw = mock(HelloWorld.class);
+    }
 
-  @Test
-  public void testMockito() throws Exception {
-    when(hw.printHelloWorld()).thenReturn("FirstTime").thenReturn("SecondTime");
-    String resp1 = hw.printHelloWorld();
-    String resp2 = hw.printHelloWorld();
-    verify(hw, times(2)).printHelloWorld();
-  }
+    @Test
+    public void testMockito() throws Exception {
+        when(hw.printHelloWorld()).thenReturn("FirstTime").thenReturn("SecondTime");
+        String resp1 = hw.printHelloWorld();
+        String resp2 = hw.printHelloWorld();
+        verify(hw, times(2)).printHelloWorld();
+    }
 }

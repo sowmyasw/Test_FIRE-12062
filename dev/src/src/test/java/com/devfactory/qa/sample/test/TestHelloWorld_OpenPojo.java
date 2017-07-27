@@ -11,17 +11,16 @@ import com.openpojo.validation.rule.impl.SetterMustExistRule;
 import org.junit.Test;
 
 public class TestHelloWorld_OpenPojo {
-  @Test
-  public void testHelloWorld(){
 
+    @Test
+    public void testHelloWorld() {
 
-    PojoClass helloWorldPojo = PojoClassFactory.getPojoClass(HelloWorld.class);
+        PojoClass helloWorldPojo = PojoClassFactory.getPojoClass(HelloWorld.class);
 
-    Validator validator = ValidatorBuilder.create()
-        .with(new GetterMustExistRule(), new SetterMustExistRule())
-        .build();
+        Validator validator = ValidatorBuilder.create()
+                .with(new GetterMustExistRule(), new SetterMustExistRule())
+                .build();
 
-    validator.validate(helloWorldPojo);
-  }
-
+        validator.validate(helloWorldPojo);
+    }
 }
