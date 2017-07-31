@@ -1,0 +1,6 @@
+com\devfactory\qa\sample\test\TestHelloWorld_ExceptionTest.class
+com\devfactory\qa\sample\test\TestHelloWorld_AssertJ.class
+com\devfactory\qa\sample\test\TestHelloWorld_OpenPojo.class
+com\devfactory\qa\sample\test\TestHelloWorld_Mockito.class
+com\devfactory\qa\sample\test\TestHelloWorld_TestNg.class
+com\devfactory\qa\sample\test\TestHelloWorld.class
